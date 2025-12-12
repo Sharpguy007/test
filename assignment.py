@@ -106,3 +106,74 @@ original_array_2 = [10, 20, 30]
 steps_to_rotate_2 = 4
 rotated_2 = rotate_array_right(original_array_2, steps_to_rotate_2)
 print(f"   Array {original_array_2} rotated right by {steps_to_rotate_2} steps: {rotated_2}") 
+
+
+###Day 2
+#Question 1
+def find_largest(a, b, c):
+    """
+    Finds the largest number among three given numbers.
+    """
+    if a >= b and a >= c:
+        return a
+    elif b >= c:
+        return b
+    else:
+        return c
+
+# Example Usage
+num1, num2, num3 = 0, 1, 2
+largest = find_largest(num1, num2, num3)
+print(f"1. The largest number among ({num1}, {num2}, {num3}) is: {largest}")
+
+num4, num5, num6 = 88, 15, 88
+largest_2 = find_largest(num4, num5, num6)
+print(f"   The largest number among ({num4}, {num5}, {num6}) is: {largest_2}")
+
+# Python one-liner using the built-in max function
+# print(max(num1, num2, num3))
+
+#Question 2
+def is_palindrome_number(n):
+    """
+    Checks if a given positive integer is a palindrome.
+    """
+    # Type conversion is the simplest way in Python for this specific problem
+    # Convert the number to a string and check if the string is equal to its reverse
+    
+    # Check for non-positive or non-integer inputs (optional)
+    if not isinstance(n, int) or n < 0:
+        return "No (Invalid Input)"
+
+    s = str(n)
+    if s == s[::-1]:  # s[::-1] is a Python slice that reverses a string
+        return "Yes"
+    else:
+        return "No"
+
+# Example Usage
+input_num_1 = 121
+result_1 = is_palindrome_number(input_num_1)
+print(f"2. Is {input_num_1} a palindrome? {result_1}")
+
+input_num_2 = 12345
+result_2 = is_palindrome_number(input_num_2)
+print(f"   Is {input_num_2} a palindrome? {result_2}")
+
+#Question 3
+def sum_even_numbers():
+    """
+    Calculates the sum of all even numbers between 1 and 100 (inclusive).
+    """
+    total_sum = 0
+    # Use the range function to generate numbers from 2 up to 100, stepping by 2
+    for number in range(2, 101, 2):
+        total_sum += number
+    
+    return total_sum
+
+# The mathematical solution (Sum = n*(n+1) where n = 100/2 = 50)
+# sum_math = 50 * (50 + 1) = 2550
+
+sum_of_evens = sum_even_numbers()
+print(f"3. The sum of all even numbers between 1 and 100 is: {sum_of_evens}")
