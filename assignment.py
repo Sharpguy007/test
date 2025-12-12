@@ -32,7 +32,7 @@ sorted_list = bubble_sort(list_to_sort.copy()) # Use .copy() to keep the origina
 print(f"1. Bubble Sort Result: {sorted_list}")
 
 
-QUESTION 2
+#QUESTION 2
 def find_intersection(arr1, arr2):
     """
     Finds the intersection of two arrays (elements common to both).
@@ -67,7 +67,7 @@ intersection_alt = list(set(array_c).intersection(set(array_d)))
 print(f"   Alternative Intersection: {intersection_alt}")
 
 
-Question 3
+#Question 3
 def rotate_array_right(arr, k):
     """
     Rotates an array to the right by k steps.
